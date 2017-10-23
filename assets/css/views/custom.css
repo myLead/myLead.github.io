@@ -1,7 +1,6 @@
 :root{
   --baner-color-chrome: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
   --baner-color-firefox-ie: linear-gradient(to right, #5B86E5, #36D1DC);
-
 }
 /* Fonts */
   /* Titulo */
@@ -9,14 +8,15 @@
       @import url('https://fonts.googleapis.com/css?family=Anton');
   /* Descrição */
       /*Preferidas*/
-
-
 /* index */
 .content{
   margin-top: 50px;
   }
   .container-fluid{
     margin: 40px auto;
+  }
+  section div{
+    padding: 0;
   }
 #navbar{
     color: #000;
@@ -42,6 +42,10 @@
   #navbar .navbar-left li a:hover{
       color: #c4c4c4;
     }
+  #navbar .navbar-brand svg{
+    margin-top:-10px;
+    height:50px
+  }
   @media (max-width: 48em) {
     #navbar .navbar-right{
       display: none;
@@ -49,15 +53,31 @@
     #navbar .navbar-left{
       text-align: center;
     }
+    #navbar .navbar-brand svg{
+      margin-top:-5px;
+      height:40px
+    }
   }
 #banner{
   background: #36D1DC;
   background: var(--baner-color-chrome);
   background:var(--baner-color-firefox-ie);
-  padding: 10% 2% 10% 2%;
+  padding: 5% 0%;
+  }
+  #banner .text{
+    padding: 0px 100px;
+
   }
   #banner h1{
     font-family: 'Anton', sans-serif;
     color: #fff;
+    font-weight: 800;
+    font-size: 80px;
+  }
+  #banner h3{
+    font-family: 'Anton', sans-serif;
+    color: #fff;
+    font-weight: 800;
+    font-size: 50px;
   }
 /* end index */
