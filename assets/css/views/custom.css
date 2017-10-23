@@ -10,7 +10,8 @@
       /*Preferidas*/
 /* index */
 .content{
-  margin-top: 50px;
+    margin-top: 50px;
+    padding-top: 5vw;
   }
   .container-fluid{
     margin: 40px auto;
@@ -45,6 +46,54 @@
   #navbar .navbar-brand svg{
     margin-top:-10px;
     height:50px
+  }
+  #navbar .navbar-toggle {
+    background: transparent;
+    right: 0;
+    border: none;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transform: translate(0%, -50%);
+  }
+  #navbar .navbar-toggle span,
+  #navbar .navbar-toggle span:before,
+  #navbar .navbar-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 30px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 80%;
+    display: block;
+    content: '';
+  }
+  #navbar .navbar-toggle span:before {
+    top: -10px;
+  }
+  #navbar .navbar-toggle span:after {
+    top: 10px;
+  }
+  #navbar .navbar-toggle span,
+  #navbar .navbar-toggle span:before,
+  #navbar .navbar-toggle span:after {
+    transition: all 0.5s ease-in-out;
+  }
+  #navbar .navbar-toggle.active span {
+    background-color: transparent;
+  }
+  #navbar .navbar-toggle.active span:before,
+  #navbar .navbar-toggle.active span:after {
+    top: 0;
+  }
+  #navbar .navbar-toggle.active span:before {
+    transform: rotate(135deg);
+  }
+  #navbar .navbar-toggle.active span:after {
+    transform: rotate(-135deg);
   }
   @media (max-width: 48em) {
     #navbar .navbar-right{
