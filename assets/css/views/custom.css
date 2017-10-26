@@ -135,6 +135,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
     }
   }
 #banner{
+  margin: 0;
   background: #36D1DC;
   background: var(--baner-color-chrome);
   background:var(--baner-color-firefox-ie);
