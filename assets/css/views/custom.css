@@ -1,7 +1,14 @@
 :root{
-  --baner-color-chrome: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
-  --baner-color-firefox-ie: linear-gradient(to right, #5B86E5, #36D1DC);
+  --light-color: #36D1DC;
+  --dark-color: #5B86E5;
+  --baner-color-chrome: -webkit-linear-gradient(to right, #5B86E5,#36D1DC);
+  --baner-color-firefox-ie: linear-gradient(to right, #5B86E5,#36D1DC);
 }
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
 /* Fonts */
   /* Titulo */
       /*Preferidas*/
@@ -11,7 +18,7 @@
 /* index */
 .content{
     margin-top: 50px;
-    padding-top: 5vw;
+    overflow: hidden;
   }
   .container-fluid{
     margin: 40px auto;
@@ -19,11 +26,17 @@
   section div{
     padding: 0;
   }
+  @media (max-width: 48em) {
+    .content{
+        padding-top: 5vw;
+      }
+  }
 #navbar{
     color: #000;
     padding: 10px 0px 10px 0px;
     background: #fff;
     border-bottom: 0px;
+    box-shadow: 0 4px 2px -2px rgba(226, 226, 226, 0.5);
   }
   .navbar-default .navbar-collapse{
     border: transparent;
@@ -42,7 +55,21 @@
   }
   #navbar .navbar-left li a:hover{
       color: #c4c4c4;
-    }
+  }
+  #navbar .navbar-right li{
+    position: relative;
+  }
+  #navbar .navbar-right li a{
+    font-size: 40px;
+    color: #333;
+    top: -10px;
+    left: -40px;
+    position: absolute;
+  }
+  #navbar .navbar-right li a:hover{
+    background-color: #333;
+    color: #fff;
+  }
   #navbar .navbar-brand svg{
     margin-top:-10px;
     height:50px
@@ -80,10 +107,11 @@
   #navbar .navbar-toggle span,
   #navbar .navbar-toggle span:before,
   #navbar .navbar-toggle span:after {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   #navbar .navbar-toggle.active span {
     background-color: transparent;
+    transition: all 0.1s ease-in-out;
   }
   #navbar .navbar-toggle.active span:before,
   #navbar .navbar-toggle.active span:after {
@@ -142,5 +170,64 @@
       font-weight: 800;
       font-size: 5vw;
     }
+  }
+#project{
+  }
+  #project h1{
+    font-family: 'Anton', sans-serif;
+    color: #333;
+    font-weight: 800;
+    margin: 80px 0px 80px 0px;
+    text-transform: uppercase;
+  }
+  #project .item{
+    text-align: center;
+    color: #000;
+    font-size: 3em;
+  }
+  #project .item figure img{
+    text-align: center;
+    width: 50%;
+  }
+  #project .item figure figcaption p{
+    font-weight: 300;
+    color: #333;
+    font-size: 20px;
+  }
+#about{
+   margin-bottom: 40px;
+  }
+  #about h1{
+    font-family: 'Anton', sans-serif;
+    color: #333;
+    font-weight: 800;
+    margin: 80px 0px 80px 0px;
+    text-transform: uppercase;
+  }
+  #about .item .text{
+      width:200px;
+  }
+  #about .item div{
+  }
+  #about .item div ul{
+    list-style: none;
+  }
+  #about .item div a{
+    display: inline;
+    font-size: 30px;
+    color: #333;
+  }
+  #about .item figure{
+    position: relative;
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  #about .item figure img{
+    width: 100%;
+  }
+  @media (max-width: 48em) {
+
   }
 /* end index */
