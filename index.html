@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myLead</title>
+    <link rel="stylesheet" href="assets/css/libs/bootstrap2.css">
     <link rel="stylesheet" href="assets/css/libs/bootstrap.css">
     <link rel="stylesheet" href="assets/css/libs/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/libs/owl.theme.default.min.css">
@@ -19,6 +20,36 @@
     <script src="assets/js/views/custom.js"></script>
   </head>
   <body>
+    <!--Abre Modal-->
+    <!--  Modal   -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitulo" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modalLoginTitulo">Entre na Sua Conta</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" class="form-control" id="loginEmail">
+              </div>
+              <div class="form-group">
+                <label for="loginSenha">Senha</label>
+                <input type="password" class="form-control" id="loginSenha">
+              </div>
+              <button type="submit" class="btn btn-primary">Entrar na Conta</button>
+              <small class="form-text text-muted">Esqueceu a senha? <a href="#">Clique aqui</a>.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Fecha Modal  -->
+    <!-- Fecha Modal -->
     <!--menu-->
     <div>
       <nav id="navbar" class="navbar navbar-default navbar-fixed-top ">
@@ -81,6 +112,9 @@
                   </svg>
                 </a>
               </div>
+
+
+
               <div class="navbar-header text-center">
                 <a type="button" class="navbar-toggle  collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
                   <span></span>
@@ -90,13 +124,10 @@
                 <ul class="nav navbar-nav navbar-left">
                   <li><a href="https://mylead.github.io/" class="nav-item nav-item-to-close">HOME</a></li>
                   <li><a href="https://mylead.github.io/entregas/" class="nav-item nav-item-to-close">ENTREGAS</a></li>
-                  <li><a href="planos/index.html" class="nav-item nav-item-to-close">PLANOS</a></li>
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
+
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a target="_blank" href="https://github.com/myLead">
-                    <i class="fa fa-github"></i>
-                  </a></li>
-                </ul>
+
               </div>
             </div>
           </div>
@@ -127,19 +158,6 @@
       <!--endbanner-->
 
 
-      <!--planos-->
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="text-center col-md-12">
-
-              
-
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--endplanos-->
 
 
       <!--apresentation-->
@@ -250,6 +268,76 @@
         </div>
       </section>
       <!--endapresentation-->
+      <section class="container">
+  <div class="text-center my-5">
+
+    <h1 class="display-4 text-primary">Escolha o Plano</h1>
+    <p>Escolha o plano que melhor se encaixa nas suas necessidades</p>
+  </div>
+  <div class="row">
+    <div class="col-md mb-5">
+      <div class="bg-light rounded p-4 box-shadow">
+        <h2>Plano Empresa Gold</h2>
+        <ul class="lista-plano list-unstyled">
+          <li>→ Plano Ilimitado</li>
+          <li>→ Até 3 Base de dados</li>
+          <li>→ Suporte 24h</li>
+          <li>→ Garantia de 30 dias</li>
+        </ul>
+        <!--<form>
+          <div class="form-group">
+            <select class="form-control bg-light" id="inputCidades">
+              <option>Selecione a cidade</option>
+              <option>California</option>
+              <option>Paris</option>
+              <option>Dublin</option>
+            </select>
+          </div>
+        </form>-->
+        <div class="col">
+          <span class="h4">R$39,90</span>
+        </div>
+        <div class="row align-items-center mt-4">
+          <div class="col">
+            <a href="inscricao.html" class="btn btn-primary btn-lg btn-block">Comprar Plano</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md mb-5">
+      <div class="bg-light rounded p-4 box-shadow">
+        <h2>Plano Empresa Premium <span class="badge badge-success">Novo</span></h2>
+        <ul class="lista-plano list-unstyled">
+          <li>→ Plano Ilimitado</li>
+          <li>→ Até 20 Base de dados</li>
+          <li>→ Suporte 24h</li>
+          <li>→ Garanta de 30 dias</li>
+        </ul>
+        <!--<form>
+          <div class="form-group">
+            <select class="form-control bg-light" id="inputCidades">
+              <option>Selecione a cidade</option>
+              <option>California</option>
+              <option>Paris</option>
+              <option>Dublin</option>
+            </select>
+          </div>
+        </form>-->
+        <div class="col">
+          <span class="h4">R$599</span>
+        </div>
+        <div class="row align-items-center mt-4">
+          <div class="col">
+            <a href="inscricao.html" class="btn btn-primary btn-lg btn-block">Comprar Plano</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
       <!--team-->
