@@ -113,11 +113,15 @@
             			<h4 class="text-center">Anexar base de dados</h4>
             		</div>
             			<div class="text-center col-md-12" >
-              				<form action="" method="get">
+              				<form action="" method="get" enctype="multipart/form-data">
                         <br><label for="nome">Base de dados:</label>
-                        <input type="text" placeholder="arquivo.csv" name="arquivo"/>
+                        <!--<input type="text" placeholder="arquivo.csv" name="arquivo"/>-->
 
-                        <input class="botao" type="submit" value="Selecionar arquivo" name="selecionar" />
+                        <!--<input class="botao" type="submit" value="Selecionar arquivo" name="selecionar" />-->
+                        <center>
+                          <input class="botao" type="file" name="selecionar" />
+                        </center>
+                        
                         <br><br><input class="botao" type="submit" value="Enviar arquivo" name="enviar" />                          
                       </form>
             			</div>
