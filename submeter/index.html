@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="icon" type="image/png" href="assets/imgs/icon/logo.png" />.
+  <head>
+    <link rel="icon" type="image/png" href="../assets/imgs/icon/logo.png" />.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tela de pagamento</title>
-	<link rel="stylesheet" href="assets/css/libs/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/libs/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/libs/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/libs/aos.css" />
-    <link rel="stylesheet" href="assets/css/views/custom.css">
-    <script src="assets/js/libs/jquery.js"></script>
-    <script src="assets/js/libs/bootstrap.js"></script>
-    <script src="assets/js/libs/owl.carousel.js"></script>
-    <script src="assets/js/libs/owl.lazyload.js"></script>
-    <script src="assets/js/libs/aos.js"></script>
-    <script src="assets/js/views/custom.js"></script>
-</head>
-<body>
-	<!--menu-->
-    <div class="menu">
+    <title>myLead</title>
+    <link rel="stylesheet" href="assets/css/libs/style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/libs/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/libs/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/libs/aos.css" />
+    <link rel="stylesheet" href="../assets/css/views/custom.css">
+    <link rel="stylesheet" href="../submeter/css/bootstrap.css">
+
+  </head>
+  <body>
+    <section>
       <nav id="navbar" class="navbar navbar-default navbar-fixed-top ">
           <div class="container header-container">
             <div class="col-md-11">
@@ -90,6 +86,7 @@
                 <ul class="nav navbar-nav navbar-left">
                   <li><a href="https://mylead.github.io/" class="nav-item nav-item-to-close">HOME</a></li>
                   <li><a href="https://mylead.github.io/entregas/" class="nav-item nav-item-to-close">ENTREGAS</a></li>
+                  <li><a href="planos/index.html" class="nav-item nav-item-to-close">PLANOS</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li><a target="_blank" href="https://github.com/myLead">
@@ -100,40 +97,38 @@
             </div>
           </div>
         </nav>
-    </div>
-    <!--endmenu-->
+    </section>
+    <form class="was-validated">
+  <label class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" required>
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Check this custom checkbox</span>
+  </label>
 
-    <div class="content">
+  <div class="custom-controls-stacked d-block my-3">
+    <label class="custom-control custom-radio">
+      <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input" required>
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Toggle this custom radio</span>
+    </label>
+    <label class="custom-control custom-radio">
+      <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input" required>
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Or toggle this other custom radio</span>
+    </label>
+  </div>
 
-    	<section>
-        	<div class="container">
-          		<div class="row">
-            		<div class="text-center col-md-12">
-            			<h1 class="text-center">CADASTRO</h1>
-            			<h4 class="text-center">PREENCHA OS CAMPOS CORRETAMENTE PARA EFETUAR O PAGAMENTO</h4>
-            		</div>
-            			<div class="text-center col-md-12" >
-              				<form action="" method="get">
-                        <br><label for="nome">Nome completo:</label>
-                        <input type="text" placeholder="Digite seu nome completo" name="nome"/>
-                        <br><br><label for="nome">Nome da empresa:</label>
-                        <input type="text" placeholder="Digite o nome da empresa" name="empresa"/> 
-                        <br><br><label for="nome">E-mail:</label> 
-                        <input type="text" placeholder="Informe em email válido" name="email"/>
-                        <br><br><label for="nome">Senha:</label>  
-                        <input type="text" placeholder="Informe uma senha" name="senha"/> 
-                        <br><br><label for="nome">Confirmar senha:</label> 
-                        <input type="text" placeholder="Repita a senha" name="confirmarSenha"/>
+  <select class="custom-select d-block my-3" required>
+    <option value="">Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
 
-                        <br><br><input class="botao" type="submit" value="Confirmar cadastro" name="cadastrar" />                          
-                      </form>
-            			</div>
-          		</div>
-        	</div>
-   		</section>
-
-    </div>
-    
-
-</body>
+  <label class="custom-file">
+    <input type="file" id="file" class="custom-file-input" required>
+    <span class="custom-file-control"></span>
+  </label>
+</form>
+  </body>
 </html>
